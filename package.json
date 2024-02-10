@@ -8,32 +8,34 @@
     "start": "next start",
     "lint": "next lint",
     "debug-prettier": "npx prettier --debug-check .",
-    "format-prettier": "prettier --write ."
+    "format-prettier": "prettier --write .",
+    "husky-post-install": "husky install && rm -rf .git/hooks && ln -s ../.husky .git/hooks"
   },
   "dependencies": {
+    "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "prettier-plugin-tailwindcss": "^0.4.0",
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8",
+    "prettier": "^2.0.2",
+    "prettier-plugin-tailwindcss": "^0.4.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5",
+    "husky": "^8.0.3"
   },
   "engines": {
     "node": "20.11.0"
