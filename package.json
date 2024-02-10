@@ -9,7 +9,8 @@
     "lint": "next lint",
     "debug-prettier": "npx prettier --debug-check .",
     "format-prettier": "prettier --write .",
-    "husky-post-install": "husky install && rm -rf .git/hooks && ln -s ../.husky .git/hooks"
+    "husky-post-install": "husky install && rm -rf .git/hooks && ln -s ../.husky .git/hooks",
+    "husky-allow-execute": "chmod +x .husky/pre-commit .husky/pre-push && chmod +x .git/hooks/pre-commit .git/hooks/pre-push && husky install"
   },
   "dependencies": {
     "next": "14.1.0",
